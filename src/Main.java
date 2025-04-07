@@ -44,15 +44,4 @@ public class Main {
             }
         }
     }
-
-    private static List<String[]> leggiCSV(String filePath) throws IOException {
-        List<String[]> records = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                records.add(line.split(";"));
-            }
-        }
-        return records;
-    }
 }
